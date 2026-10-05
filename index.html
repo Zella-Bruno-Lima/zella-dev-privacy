@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Como o ZELLA DEV utiliza dados da conta Atlassian e do Jira para acompanhar tarefas e alocação do time.">
+  <title>Política de privacidade | ZELLA DEV</title>
+  <style>
+    @font-face { font-family: Poppins; src: url('./assets/poppins-regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: Poppins; src: url('./assets/poppins-semibold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+    :root { color-scheme: light; --surface: #fff; --background: #f1f2f7; --line: #e9ecf3; --text: #1f384c; --muted: #596273; --accent: #5a6acf; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--background); color: var(--text); font: 400 1rem/1.8 Poppins, system-ui, sans-serif; }
+    .topbar { background: var(--surface); border-bottom: 1px solid var(--line); }
+    .brand { max-width: 880px; margin: auto; padding: 20px 32px; display: flex; align-items: center; gap: 12px; color: var(--accent); font-weight: 600; letter-spacing: .5px; }
+    .logo { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: white; font-size: 14px; }
+    main { max-width: 816px; margin: 40px auto; padding: 40px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+    header { padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+    h1 { margin: 0 0 12px; font-size: 1.75rem; line-height: 1.4; font-weight: 600; }
+    h2 { margin: 0 0 10px; font-size: 1.125rem; line-height: 1.5; font-weight: 600; }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    .intro, .updated { color: var(--muted); }
+    .updated { display: block; margin-top: 16px; font-size: .875rem; }
+    section { margin-top: 28px; }
+    ul { margin: 12px 0 0; padding-left: 24px; }
+    li + li { margin-top: 8px; }
+    .contact { padding: 24px; background: #f6f6fb; border: 1px solid var(--line); border-radius: 5px; }
+    footer { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+    @media (max-width: 600px) { .brand { padding: 16px 20px; } main { margin: 20px 12px; padding: 24px 20px; } h1 { font-size: 1.5rem; } .contact { padding: 20px; } }
+    @media print { body { background: white; } .topbar { border: 0; } main { border: 0; margin: 0 auto; } }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="brand"><span class="logo" aria-hidden="true">Z</span><span>ZELLA DEV</span></div></div>
+  <main>
+    <header>
+      <h1>Política de privacidade</h1>
+      <p class="intro">O ZELLA DEV é uma ferramenta interna para acompanhar tarefas, disponibilidade e alocação do time de desenvolvimento a partir de dados do Jira Cloud.</p>
+      <time class="updated" datetime="2026-10-05">Última atualização: 5 de outubro de 2026</time>
+    </header>
+    <section aria-labelledby="data-title">
+      <h2 id="data-title">1. Dados utilizados</h2>
+      <ul>
+        <li><strong>Identificação:</strong> nome e identificador da conta Atlassian para autenticar e verificar o acesso ao sistema.</li>
+        <li><strong>Dados do Jira:</strong> nomes, identificadores, avatares e situação das contas; projetos, resumos de tarefas, responsáveis, status, datas e histórico de transições.</li>
+        <li><strong>Gestão do time:</strong> membros autorizados, alocações manuais, observações e registros de quem realizou alterações administrativas e quando.</li>
+      </ul>
+    </section>
+    <section aria-labelledby="purpose-title">
+      <h2 id="purpose-title">2. Finalidade e acesso</h2>
+      <p>Esses dados permitem controlar o acesso, apresentar os painéis de trabalho, acompanhar tarefas e registrar a gestão do time.</p>
+      <p>Os membros autorizados consultam uma base compartilhada, sincronizada pela conta técnica configurada na integração com o Jira. As permissões individuais de cada usuário no Jira não são reaplicadas aos painéis do ZELLA DEV.</p>
+    </section>
+    <section aria-labelledby="login-title">
+      <h2 id="login-title">3. Login e armazenamento no navegador</h2>
+      <p>O login ocorre na Atlassian por OAuth 2.0. O ZELLA DEV não solicita nem armazena sua senha Atlassian. O token recebido nesse login é utilizado para identificar a conta e não é salvo na sessão.</p>
+      <p>O sistema utiliza cookies para manter a sessão e proteger operações contra solicitações indevidas. A preferência de tema claro ou escuro é armazenada localmente no navegador.</p>
+    </section>
+    <section aria-labelledby="storage-title">
+      <h2 id="storage-title">4. Armazenamento e retenção</h2>
+      <p>Os dados sincronizados e os registros administrativos ficam no banco de dados da aplicação. A integração se comunica com a Atlassian para autenticação e consulta dos dados do Jira.</p>
+      <p>A sincronização atualiza a base e remove tarefas e projetos que deixaram de fazer parte do conjunto sincronizado. Não há um prazo automático de exclusão por idade para os cadastros de usuários e registros administrativos; a remoção desses dados depende da administração do sistema.</p>
+      <p>Sair da conta encerra a sessão, mas não exclui os dados sincronizados do banco.</p>
+    </section>
+    <section class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">5. Contato e solicitações</h2>
+      <p>A operação do sistema é conduzida pela equipe responsável pelo ZELLA DEV. Para esclarecer o uso dos seus dados ou solicitar acesso, correção ou exclusão, procure o administrador que disponibilizou seu acesso, pelo canal interno utilizado pelo time.</p>
+      <p>Alterações nos dados de origem também podem precisar ser feitas no Jira para que sejam refletidas nas próximas sincronizações.</p>
+    </section>
+    <footer>ZELLA DEV · Integração interna com Jira Cloud</footer>
+  </main>
+</body>
+</html>
